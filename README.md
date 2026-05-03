@@ -36,7 +36,7 @@ Add to your `.env`:
 
 ```env
 WUZAPI_BASE_URL=http://localhost:8080
-WUZAPI_TOKEN=your-user-token
+WUZAPI_TOKEN=your-admin-token
 ```
 
 Published config (`config/wuzapi.php`):
