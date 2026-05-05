@@ -9,6 +9,7 @@ class SendTextRequest
     public function __construct(
         public readonly string $phone,
         public readonly string $body,
+        public readonly ?bool $linkPreview = false,
         public readonly ?string $id = null,
         public readonly ?SimpleContextInfo $contextInfo = null,
     ) {}
@@ -18,6 +19,7 @@ class SendTextRequest
         $data = [
             'Phone' => $this->phone,
             'Body' => $this->body,
+            'LinkPreview' => $this->linkPreview,
         ];
 
         if ($this->id !== null) {
