@@ -15,8 +15,8 @@ class SetWebhookRequest
     public function toArray(): array
     {
         return [
-            'webhook' => $this->webhook,
-            'events' => array_map(
+            'WebhookURL' => $this->webhook,
+            'Events' => array_map(
                 fn ($e) => $e instanceof WebhookEventType ? $e->value : $e,
                 $this->events
             ),

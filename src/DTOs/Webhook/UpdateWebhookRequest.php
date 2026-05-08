@@ -18,7 +18,7 @@ class UpdateWebhookRequest
         $data = [];
 
         if ($this->webhook !== null) {
-            $data['webhook'] = $this->webhook;
+            $data['WebhookURL'] = $this->webhook;
         }
 
         if ($this->events !== null) {
