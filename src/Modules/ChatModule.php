@@ -150,9 +150,9 @@ class ChatModule
         return SendMessageResponse::fromArray((array) $data);
     }
 
-    public function deleteMessage(string $messageId, ?string $token = null): array
+    public function deleteMessage(string $messageId, string $phone, ?string $token = null): array
     {
-        return (array) $this->client->post('/chat/delete', ['Id' => $messageId], $token);
+        return (array) $this->client->post('/chat/delete', ['Id' => $messageId, 'Phone' => $phone], $token);
     }
 
     public function editMessage(string $messageId, string $phone, string $newBody, ?string $token = null): SendMessageResponse

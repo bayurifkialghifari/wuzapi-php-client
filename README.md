@@ -180,7 +180,7 @@ WuzApi::chat->markRead(new MarkReadRequest(ids: ['msg-1', 'msg-2'], chat: '628xx
 
 // Edit / Delete
 WuzApi::chat->editMessage('msg-id', '628xx', 'Updated text');
-WuzApi::chat->deleteMessage('msg-id');
+WuzApi::chat->deleteMessage('msg-id', '628xx');
 
 // Archive
 WuzApi::chat->archiveChat('628xx@s.whatsapp.net', archive: true);

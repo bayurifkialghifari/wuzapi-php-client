@@ -104,7 +104,7 @@ it('deletes a message', function () {
         ]),
     ]);
 
-    $result = $this->client->chat->deleteMessage('msg-id-abc');
+    $result = $this->client->chat->deleteMessage('msg-id-abc', '5491155554444');
 
     expect($result)->toBeArray();
 });
